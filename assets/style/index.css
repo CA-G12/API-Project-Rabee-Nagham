@@ -3,11 +3,13 @@ html {
   padding: 0px;
 }
 body,
-h2,
 h4,
 p {
   padding: 0px;
   margin: 0px;
+}
+h2 {
+  margin: 16px 32px 0px 32px;
 }
 .nopad {
   padding: 0;
@@ -17,7 +19,10 @@ p {
 }
 .cards_container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  overflow: scroll hidden;
+  min-height: 350px;
+  margin: 0px 32px;
 }
 .img {
   height: calc(150px * 1.5);
@@ -31,4 +36,193 @@ p {
   height: 100%;
   width: 100%;
   border-radius: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  background-color: #032541;
+  color: white;
+  /* overflow:scroll; */
+}
+header .headerLeftSide {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+header .headerRightSide {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+header .headerLeftSide ul {
+  padding: 0;
+  margin-top: 30px;
+}
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+header #logo {
+  width: 170px;
+  height: 80px;
+}
+#showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#showcase .container {
+  min-height: 300px;
+  background: url("../imgs/section1.jpg");
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  background-size: cover;
+  width: 80%;
+}
+#showcase #outColor {
+  background: rgba(50, 70, 80, 0.7);
+  overflow: hidden;
+  min-height: 350px;
+  width: 100%;
+}
+#showcase h2 {
+  font-size: 55px;
+  padding: 0;
+  margin-bottom: 0;
+  margin-left: 30px;
+  font-weight: 700;
+}
+#showcase h3 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-left: 30px;
+}
+#showcase form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#showcase form input[type="text"] {
+  width: 70%;
+  height: 30px;
+  line-height: 46px;
+  font-size: 1.1em;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 30px;
+}
+#showcase form input[type="button"] {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 46px;
+  padding: 10px 26px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgba(1, 180, 228, 1) 0%,
+    rgba(144, 206, 161, 1) 100%
+  );
+  border-radius: 30px;
+  /* position: absolute; */
+  top: 0;
+  /* left: 20px; */
+  color: #fff;
+}
+
+/****************************footer css*************************************************************/
+footer {
+  max-width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: #032541;
+  background-position: center top;
+  background-size: cover;
+  height: 300px;
+}
+footer nav {
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+  justify-content: center;
+}
+footer img {
+  width: 130px;
+  height: 110px;
+}
+footer .footerDiv1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+footer button {
+  width: 180px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 700px;
+  color: rgba(1, 180, 228, 1);
+  font-size: 20px;
+}
+footer .footerDiv2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  align-items: center;
+}
+footer ul {
+  list-style-type: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
