@@ -107,7 +107,7 @@
   };
   setTimeout(() => {
     fetch(URL, renderState);
-  }, 500);
+  }, 700);
   setTimeout(() => {
     fetch(ANIME_URL, anmieRenderState);
   }, 0);
